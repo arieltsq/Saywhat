@@ -1,0 +1,42 @@
+<!-- {{outlet}} -->
+<h3> Translation Dictionary</h3>
+<div class="container-fluid">
+  <!-- <p>Please do note that these phrases are crowd sourced. If you think there's discrepancy to it's true meaning. Feel free to edit </p> -->
+
+
+  {{#each model as |translation|}}
+
+  {{paper-divider}}
+  <div class="row space">
+    <div class="space">
+      <div class="col-md-6 pull-left">
+        <div class="row">
+          <div class="col-md-6"><span class="fontBig spanRed">Phrase:</span> </div>
+          <div class="col-md-6"><span class="fontBig spanRed">{{translation.phrase.name}}</span></div>
+        </div>
+        <!-- {{paper-divider}} -->
+        <div class="row space">
+          <div class="col-md-6"><strong>Translated</strong> </div>
+          <div class="col-md-6">{{translation.name}}</div>
+        </div>
+        <div class="row space">
+          <div class="col-md-6"><strong>Language of Translation:</strong> </div>
+          <div class="col-md-6">{{translation.language}}</div>
+        </div>
+
+      </div>
+      <div class="col-md-6 pull-right">
+        <div class="row">
+          <div class="col-md-4"><button class="md-button  Darkred" {{action 'deleteTranslation' translation}}>Delete</button></div>
+          <!-- <div class="col-md-4">{{#link-to 'phrases.edit' phrase class='md-button editYellow'}}Edit{{/link-to}}</div>
+          <div class="col-md-4">{{#link-to 'phrases.show' phrase class='md-button Darkgrey'}}Show{{/link-to}}</div>
+          <div class="col-md-4"><button class="md-button  Darkred" {{action 'deletePhrase' phrase}}>Delete</button></div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- {{paper-divider}} -->
+  {{paper-divider}}
+  {{/each}}
+
+</div>

@@ -1,0 +1,43 @@
+{{outlet}}
+
+<h3> Phrases Dictionary</h3>
+<div class="container-fluid">
+  <p>Please do note that these phrases are crowd sourced. If you think there's discrepancy to it's true meaning. Feel free to edit </p>
+
+
+  {{#each model.phrases as |phrase|}}
+  {{paper-divider}}
+  <div class="row space">
+    <div class="space">
+      <div class="col-md-6 pull-left">
+        <div class="row">
+          <div class="col-md-6"><strong>Name of the Phrase:</strong> </div>
+          <div class="col-md-6">{{phrase.name}}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-6"><strong>Phrase Category:</strong> </div>
+          <div class="col-md-6">{{phrase.category}}</div>
+        </div>
+      </div>
+      <div class="col-md-6 pull-right">
+        <div class="row">
+          <div class="col-md-4">{{#link-to 'phrases.edit' phrase class='md-button editYellow'}}Edit{{/link-to}}</div>
+          <div class="col-md-4">{{#link-to 'phrases.show' phrase class='md-button Darkgrey'}}Show{{/link-to}}</div>
+          <div class="col-md-4"><button class="md-button  Darkred" {{action 'deletePhrase' phrase}}>Delete</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- {{paper-divider}} -->
+  {{paper-divider}}
+  {{/each}}
+
+</div>
+
+<!-- {{paper-divider}} -->
+<h3> Contribute</h3>
+
+<div class="container-fluid borderBox">
+  <p> Can't see the phrases you're working for? Contribute to our library and help others who are learning as well!</p>
+  {{#link-to 'phrases.create' class='md-button Pastelgreen' }}Create Phrases{{/link-to}}
+</div>

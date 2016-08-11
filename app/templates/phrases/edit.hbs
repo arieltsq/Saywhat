@@ -1,0 +1,24 @@
+{{outlet}}
+<h1> {{model.name}}</h1>
+{{paper-divider}}
+
+<div class="container-fluid space">
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-xs-6 col-md-4"><strong>Name of the word:</strong></div>
+    <div class="col-xs-12 col-sm-6 col-md-8">{{paper-input label="Example of Word etc 'hello / 1 / car' "  value=model.name}} </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6 col-md-4"><strong>Category the word belongs to :</strong></div>
+    <div class="col-xs-12 col-sm-6 col-md-8">{{paper-input label="Example of 'Greeting/Numbers'" value=model.category}} </div>
+  </div>
+<br>
+<div class="space pull-right">
+  <button type="submit" class="md-button editYellow" {{action 'editPhrase' model}}>Edit Phrase</button>
+  {{#link-to 'translations.new' model.id class='md-button Darkgrey'}}Create Translation{{/link-to}}
+</div>
+</div>
+<!--
+{{paper-input label=model.name  value=model.name}}
+{{paper-input label=model.category  value=model.category}} -->

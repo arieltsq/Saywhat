@@ -1,0 +1,32 @@
+<!-- {{yield}} -->
+<!-- {{#power-select
+selected=lanaguage
+options=languages
+onchange=(action (mut lanaguage))
+as |name|
+}}
+{{name}}
+{{/power-select}} -->
+
+
+<div class="row">
+  <div class="col-md-6"></div>
+  <div class="col-md-6">
+    <button class="md-button pull-right Darkgrey" {{action 'showTranslation' phrase}}> Show Available translation</button>
+  </div>
+</div>
+{{label}}
+{{#each results as |oneresult|}}
+
+<div class="row space">
+
+  <div class="col-xs-6"><span class="fontBig spanRed">Translated into :</span></div>
+  <div class="col-xs-6"><span class="fontBig spanRed">Language :</span></div>
+</div>
+<div class="row space">
+  <div class="col-xs-6">{{oneresult.name}}</div>
+  <div class="col-xs-6">{{oneresult.language}}</div>
+</div>
+{{paper-divider}}
+<br>
+{{/each}}

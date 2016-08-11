@@ -1,0 +1,228 @@
+@import 'ember-paper';
+@import "ember-power-select";
+@import "bootstrap";
+@import 'https://fonts.googleapis.com/css?family=Playfair+Display';
+@import 'https://fonts.googleapis.com/css?family=Comfortaa';
+
+*
+html,
+body {
+  font-family: 'Comfortaa', cursive;
+  margin:0;
+  padding:0;
+  height:100%;
+}
+#wrapper {
+  min-height:100%;
+  position:relative;
+}
+.btn{
+  border: 1px solid black;
+  color: black;
+}
+#header {
+  padding:10px;
+}
+#content {
+  padding-bottom:200px; /* Height of the footer element */
+}
+#footer {
+  // background:#ffab62;
+  width:100%;
+  height:10px;
+  position:absolute;
+  bottom:0;
+  left:0;
+}
+.button{
+  border:1px solid #404040;
+  padding: 10px;
+  margin:5px;
+}
+/* <=== Colors ==> */
+.Darkgrey{
+
+  background-color: #404040;
+  color:white;
+
+}
+.md-button{
+  padding: 5px;
+}
+.md-button:hover, .md-button:focus {
+    color:white
+}
+.Darkgrey, a:hover, a:focus {
+    color: white;
+}
+.Darkgrey > .md-button:hover{
+    color: white;
+}
+.Darkred {
+  background-color: #BF3D3D;
+  color:white;
+}
+.Pastelblue{
+  background-color: lightcyan;
+  color: black;
+}
+.editYellow{
+  background-color: #FFA31E;
+}
+.spanRed{
+  color:#BF3D3D;
+}
+// .Darkred > .md-button:hover{
+//     color: black;
+// }
+.Pastelgreen{
+  background-color: #19BF82;
+  // border:1px solid black;
+}
+
+.Pastelgreen , a:hover, a:focus {
+    color: black;
+}
+.fontBig{
+  font-size: 16px;
+}
+.fontMedium{
+  font-size: 14px;
+}
+
+.bg-1{
+  // padding-top: 100px;
+  color:rgba(20, 20, 23, 0.68);
+  margin-top: 10px;
+  border:1px solid black;
+  // background-color: rgba(20, 20, 23, 0.68);
+  background-color: white;
+  height:300px;
+  padding-bottom: 100px;
+}
+.borderBox{
+  border:1px solid black;
+  padding: 10px;
+}
+.bg-2{
+  color:rgba(20, 20, 23, 0.68);
+  margin-top: 10px;
+  border:1px solid black;
+  // background-color: rgba(20, 20, 23, 0.68);
+  background-color: white;
+  height:500px;
+  padding-bottom: 100px;
+}
+.bg-show{
+  color:black;
+  margin-top: 10px;
+  padding-top: 10px;
+  border:1px solid black;
+  // background-color: rgba(20, 20, 23, 0.68);
+  background-color: white;
+  height:200px;
+
+}
+.red{
+  background-color: red;
+}
+
+.space {
+  padding:15px;
+
+}
+#custom-bootstrap-menu.navbar-default .navbar-brand, #dropdown-toggle  {
+  color: black;
+  margin-top: 5px;
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  text-transform: uppercase;
+}
+#custom-bootstrap-menu.navbar-default, #dropdown-toggle  {
+  font-size: 14px;
+  background-color: white !important;
+  border: 1px solid black !important;
+  font-family: 'Comfortaa', cursive;
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a, #dropdown-toggle {
+  color: black;
+  border:1px solid black;
+  margin: 4px;
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus,
+#dropdown-toggle {
+  color:rgb(50, 50, 50);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus,
+#dropdown-toggle  {
+  color: white;
+  border:1px solid black;
+
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle {
+  border-color: #000000;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus,
+#dropdown-toggle  {
+  background-color: white;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar, #dropdown-toggle  {
+  background-color: #000000;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar, #dropdown-toggle  {
+  background-color: #000000;
+}
+.navbar-default{
+  margin: 5px;
+  background-image: linear-gradient(to bottom,#fff 0,#fff 100%);
+  background-image: white !important;
+}
+/* <== Paper icon CSS ==>*/
+.material-icons.book:before {
+  color: black;
+}
+.material-icons.face:before {
+  color: black;
+}
+.material-icons.clear:before {
+  color: black;
+}
+.material-icons.arrow-drop-down-circle:before {
+  color: black;
+}
+.material-icons.create:before {
+  color: black;
+}
+.material-icons.folder:before {
+  color: black;
+}
+.material-icons.add:before {
+  color: black;
+}
+.material-icons.translate:before {
+  color: white;
+}
+md-divider.md-default-theme {
+  border-top-color: black;
+}
+
+/* <=== Text Styles ==>*/
+
+.alignLeft{
+  text-align: left !important;
+}
+
+.formText {
+  bottom: 0px;
+}
+
+@media (min-width: 992px){
+.col-md-4 {
+    width: 18%;
+}
+}

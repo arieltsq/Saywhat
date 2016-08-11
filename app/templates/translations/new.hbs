@@ -1,0 +1,27 @@
+{{outlet}}
+<h1> You're creating Translation for : {{phrase_name}} </H1>
+  <div class="form-horizontal">
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+          {{paper-input label="Translation etc '你好，Lei hoi ma'" value=model.name}}
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+          {{paper-input label="Language of your translation" value=model.language}}
+        </div>
+    </div>
+
+      <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="md-button Pastelgreen" {{action 'newTranslation' model}}>Create phrase</button>
+
+            <!-- {{#paper-button raised=true action="buttonClicked"}}Contribute{{/paper-button}} -->
+              <!-- <button type="submit" class="btn btn-default" {{action 'buttonClicked' item}} > Contribute</button> -->
+          </div>
+      </div>
+  </div>

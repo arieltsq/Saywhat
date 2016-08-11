@@ -1,0 +1,33 @@
+{{outlet}}
+<!-- {{outlet}} -->
+
+<h3>Let's create a SAYWHAT! account</h3>
+
+<div class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-2 control-label"><br>Email</label>
+    <div class="col-sm-10">
+      {{paper-input label="Please enter Email" type="email" value=model.email customValidation=emailValidation}}
+      <!-- {{input type="text" value=model.email class="form-control"}} -->
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label"><br>Password</label>
+    <div class="col-sm-10">
+    {{paper-input label="Please enter Password" type="password" value=minNumber value=model.password min="1" min-errortext="Enter at least 1." required=true }}
+      <!-- {{input type="password" value=model.password class="form-control" }} -->
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label"><br>Confirm Password</label>
+    <div class="col-sm-10">
+          {{paper-input label="Please retype your password again" type="password" value=minNumber value=model.password_confirmation min="1" min-errortext="Enter at least 1." required=true }}
+      <!-- {{input type="password" value=model.password_confirmation class="form-control"}} -->
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="md-button Pastelgreen" {{action 'newUser' model}}>Create User</button>
+    </div>
+  </div>
+</div>

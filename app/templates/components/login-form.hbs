@@ -1,0 +1,26 @@
+<div class="borderBox space text-left">
+  <form {{action "authenticate" on="submit"}}>
+    <label for="identification" class="fontBig">Login</label>
+    <div class="row">
+  <div class="col-md-3 text-center"> Email</div>
+  <div class="col-md-8 ">{{paper-input type="email" value=identification required=true}}</div>
+</div>
+
+<div class="row">
+<div class="col-md-3 text-center"> Password</div>
+<div class="col-md-8 text-left">{{paper-input  type="password" value=password min="6" min-errortext="Password is minmium 6 length" required=true }}
+</div>
+</div>
+<div class="row">
+  <div class="col-md-5"></div>
+  <div class="col-md-5"></div>
+  <div class="col-md-2"><button type="submit" class='btn Pastelblue'>Login</button>
+</div>
+</div>
+    <!-- {{paper-input  value=password type="password"}} -->
+  </form>
+
+  {{#if errorMessage}}
+  {{errorMessage}}
+  {{/if}}
+</div>

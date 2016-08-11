@@ -1,0 +1,28 @@
+{{outlet}}
+
+<h1>Hello, Let's create a phrase!</h1>
+<br>
+<div class="form-horizontal">
+
+  <div class="form-group">
+      <label class="col-sm-2 control-label"> What would your <span class="fontBig spanRed">phrase</span> be like? </label>
+      <div class="col-sm-10">
+        {{paper-input label="Phrases etc 'Hello,Goodbye'" value=model.name}}
+      </div>
+  </div>
+
+  <div class="form-group">
+      <label class="col-sm-2 control-label">What would be the <span class="fontBig spanRed">category</span> for this?</label>
+      <div class="col-sm-10">
+        {{paper-input label="Category , etc 'Greetings'" value=model.category}}
+      </div>
+  </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="md-button Pastelgreen" {{action 'newTranslation' model}}>Create phrase</button>
+          <!-- {{#paper-button raised=true action="buttonClicked"}}Contribute{{/paper-button}} -->
+            <!-- <button type="submit" class="btn btn-default" {{action 'buttonClicked' item}} > Contribute</button> -->
+        </div>
+    </div>
+</div>

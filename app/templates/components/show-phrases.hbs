@@ -1,0 +1,26 @@
+<div class="text-center space">
+  {{#power-select
+    selected=onePhrase
+    options=names
+    onchange=(action "choosePhrase")
+    as |name|
+  }}
+  {{name}}
+  {{/power-select}}
+  <br><br>
+  {{labelMessage}}
+  {{#each results as |oneresult|}}
+
+  <div class="row space">
+
+    <div class="col-xs-6"><span class="fontMedium spanRed">Translated into :</span></div>
+    <div class="col-xs-6"><span class="fontMedium spanRed">Language :</span></div>
+  </div>
+  <div class="row space">
+    <div class="col-xs-6">{{oneresult.name}}</div>
+    <div class="col-xs-6">{{oneresult.language}}</div>
+  </div>
+  {{paper-divider}}
+  <br>
+  {{/each}}
+</div>

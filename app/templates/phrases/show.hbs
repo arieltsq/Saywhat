@@ -1,0 +1,31 @@
+{{outlet}}
+
+<div class="row">
+  <div class="col-xs-6"><h3> {{model.phrases.name}}</h3></div>
+  <div class="col-xs-6">  {{#link-to 'translations.new' model.phrases.id class='ember-view md-primary md-button Pastelgreen pull-right' }} Add Translation{{/link-to}}
+</div>
+</div>
+
+<!-- <div class="space">
+  {{#link-to 'translations.new' model.phrases.id class='md-button Darkgrey'}}Create Translation For this!{{/link-to}}
+</div> -->
+{{paper-divider}}
+
+<div class="container-fluid space">
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-md-6"><strong>Name of the word:</strong></div>
+    <div class="col-md-6">{{model.phrases.name}} </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6"><strong>Category the word belongs to :</strong></div>
+    <div class="col-md-6">{{model.phrases.category}} </div>
+  </div>
+
+  <br>
+
+
+{{show-translations translations=model.translations}}
+
+</div>
