@@ -8,12 +8,15 @@
   <!-- {{paper-autocomplete minLength=0 delay=300 placeholder="Search for translation" source=dataFromPromise lookupKey="name" model=model.phrases cache-miss="updateFilter"}} -->
   <div class="row">
     <div class="row space">
-  <div class="col-md-2"></div>
-  <div class="col-md-6 text-center space"><span class="spanRed space">Type/search in the below box for words you would like to be translated</span></div>
-  <div class="col-md-2"></div>
+  <div class="col-md-3"></div>
+  <div class="col-md-6 text-center"><span class="spanRed">Type/search in the below box for words you would like to be translated</span></div>
+  <div class="col-md-3"></div>
 </div>
-    <div class="col-md-4"></div>
-    <div class="col-md-8">{{show-phrases translations=model.translations phrases=model.phrases}}</div>
+</div>
+  <div class="row">
+      <div class="col-md-3"></div>
+    <div class="col-md-6">{{show-phrases translations=model.translations phrases=model.phrases}}</div>
+  <div class="col-md-3"></div>
   </div>
 <!-- <p class="text-center">Find the word:<br></p> -->
 
