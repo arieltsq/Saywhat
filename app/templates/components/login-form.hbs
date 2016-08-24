@@ -15,11 +15,15 @@
   <div class="col-md-5"></div>
   <div class="col-md-5"></div>
   <div class="col-md-2"><button type="submit" class='btn Pastelblue'>Login</button>
+
 </div>
 </div>
     <!-- {{paper-input  value=password type="password"}} -->
   </form>
-
+  <br>
+  <center>
+Don't have an account with Saywhat yet? Create one here :  {{#link-to 'users.create' class=' btn Pastelgreen'}} {{ paper-icon "create"}}Create Account{{/link-to}}
+</center>
   {{#if errorMessage}}
   {{errorMessage}}
   {{/if}}
